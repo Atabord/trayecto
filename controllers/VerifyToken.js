@@ -8,7 +8,7 @@ function verifyToken(req, res, next) {
   jwt.verify(token, config.secret, function(err, decoded) {
     if (err)
     return res.status(500).send({ auth: false, message: 'Fallo al autenticar token' });
-    // si todo esta bien guarda para proximas rutas
+    // si todo esta bien, guarda para proximas rutas
     req.userId = decoded.id;
     next();
   });
