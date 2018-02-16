@@ -1,14 +1,14 @@
-var Alatitude = new Array();
-var Alongitude = new Array();
+// var Alatitude = new Array();
+// var Alongitude = new Array();
 class Localizacion {
   constructor(callback) {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position)=>{
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        
-        Alatitude.push(this.latitude);
-        Alongitude.push(this.longitude);
+
+        // Alatitude.push(this.latitude);
+        // Alongitude.push(this.longitude);
 
         callback();
       });
