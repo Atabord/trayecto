@@ -30,9 +30,9 @@ router.post('/register', function(req, res) {
   },
   function (err, user) {
     if (err) return res.status(500).send("There was a problem registering the user.")
-    // create a token
+    // crea el token
     var token = jwt.sign({ id: user._id }, config.secret, {
-      expiresIn: 86400 // expires in 24 hours
+      expiresIn: 86400 // expira en 24 horas
     });
     res.status(200).send({ auth: true, token: token });
   });
@@ -59,7 +59,7 @@ router.post('/login', function(req, res) {
     var passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
     if (!passwordIsValid) return res.status(401).send({ auth: false, token: null });
     var token = jwt.sign({ id: user._id }, config.secret, {
-      expiresIn: 86400 // expires in 24 hours
+      expiresIn: 86400 // expira en 24 horas
     });
     res.status(200).redirect('/inicio');
   });
