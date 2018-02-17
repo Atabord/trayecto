@@ -18,3 +18,13 @@ El proyecto fue realizado usando la arquitectura MVC (Modelo vista controlador) 
 2. Autorización de usuario (qué puede hacer y qué no al estar o no estar autenticado)
 3. Logout del usuario.
 4. Prueba en Data Center Academico (por fallas en el vpn)
+
+## Instalación
+1. Clonar repositorio.
+  ..* git clone https://github.com/Atabord/trayecto.git
+2. Instalar node y npm [Instrucciones Aquí](https://nodejs.org/en/download/) Se recomienda la version LTS, es decir 8.9.4
+  ..* Verificar la instalación con "node -v" y "npm -v"
+3. Instalar Mongodb community server [Instrucciones Aquí](https://www.mongodb.com/download-center#community)
+4. Abrir la terminar e ir al directorio donde se encuentra la aplicación web.
+5. Usar el comando "npm install", esto instalará todos los modulos encontrados en package.json, los cuales son necesarios para su funcionamiento
+6. Probar la aplicación usando el comando "npm start", o "node server.js"
